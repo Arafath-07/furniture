@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>furniture site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="img/png"
+    href="data:image/jpeg;base64,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">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Gideon+Roman&family=Kalnia+Glaze:wght@100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+
+    }
+
+    body {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-style: italic;
+
+    }
+
+    h1 {
+      font-family: "Ga Maamli", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+
+    }
+
+    #hea {
+      color: brown;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a id="hea" class="navbar-brand" a href="">HarmonyHaven <i class="fa-solid fa-couch text-dark"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+
+        <div class="d-flex flex-sm-column text-center mt-3 ">
+          <i class="fa-solid fa-store mx-5 fs-3"></i>
+          <p class="text-dark ">Store</p>
+        </div>
+        <div class="d-flex flex-sm-column text-center mt-3 ">
+          <i class="fa-solid fa-user fs-3"></i>
+          <p class="text-dark ">Profile</p>
+        </div>
+        <div class="d-flex flex-sm-column text-center mt-3 ">
+          <i class="fa-solid fa-heart fs-3 mx-5"></i>
+          <p class="text-dark ">Wishlist</p>
+        </div>
+        <div class="d-flex flex-sm-column text-center mt-3 ">
+          <i class="fa-solid fa-cart-shopping fs-3 "></i>
+          <p class="text-dark ">Cart</p>
+        </div>
+
+
+      </div>
+    </div>
+  </nav>
+  <hr>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-light ">
+          <li class="nav-item mx- ">
+            <a class="nav-link active ms-5" aria-current="page" href="#">Sofas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Living</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Bedrooms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Dining & Kitchen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Storage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Study & Office</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Mattresses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Decor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Lamps & Lighting</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Furnishings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">Outdoor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active ms-4" aria-current="page" href="#">WS Value</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <hr>
+  <div id="carouselExampleIndicators" class="carousel slide p-2">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://cdn.pixabay.com/photo/2018/09/15/09/05/home-3678955_1280.jpg" width="100%" height="500px"
+          class="d-block w-100 " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2020/11/24/11/36/bedroom-5772286_1280.jpg" width="100%" height="500px"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://cdn.pixabay.com/photo/2018/01/26/08/15/dining-room-3108037_1280.jpg" width="100%"
+          height="500px" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <div class="row text-center">
+    <h2 class="p-5">Top Picks For You</h2>
+    <div class="col-2"></div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2016/08/07/00/44/bed-1575491_640.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Beds</p>
+    </div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2017/08/06/15/44/house-2593570_640.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Sofas</p>
+    </div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2020/04/18/08/06/furniture-5058151_640.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Dining Table Sets</p>
+    </div>
+    <div class="col-2"> <img src="https://cdn.pixabay.com/photo/2020/09/08/19/10/lounge-5555652_640.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">TV Units</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row text-center mt-5">
+    <div class="col-2"></div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2017/08/10/18/49/desk-2626344_1280.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Lamp And Lightings</p>
+    </div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2021/04/22/18/50/frames-6199828_1280.jpg" width="150px"
+        height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Home Decor</p>
+    </div>
+    <div class="col-2"><img src="https://cdn.pixabay.com/photo/2016/11/29/08/02/furniture-1868274_1280.jpg"
+        width="150px" height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Book Shelves</p>
+    </div>
+    <div class="col-2"> <img src="https://cdn.pixabay.com/photo/2019/03/05/22/47/living-room-table-4037281_960_720.jpg"
+        width="150px" height="150px" class="rounded-circle border bg-light">
+      <p class="fw-bold mt-3">Cofee Tables</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="row text-start mx-5 my-5 ">
+    <h2>Explore Essential Home furniture</h2>
+    <p class="mb-5 fs-5" >Design Your Home Decor, Your Way</p>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2024/02/23/12/30/bed-8591970_1280.jpg" width="250px" height="250px"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Beds</h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">24,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2023/12/31/15/42/living-room-8480223_640.jpg" width="250px"
+          height="250px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Sofa Sets</h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">19,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2023/11/21/11/50/dining-room-8403187_1280.jpg" width="250px"
+          height="250px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Dining Table </h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">15,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2023/12/20/13/30/wardrobe-8459898_1280.jpg" width="250px" height="250px"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Wardrobes</h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">18,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row mx-5 my-5 text-start">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2018/11/13/13/14/table-lamp-3813016_1280.jpg" width="250px"
+          height="250px" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Lamp & Lighting</h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">1,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2015/07/04/13/25/table-831301_1280.jpg" width="250px" height="250px"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Cofee Table </h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">9,999</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2015/10/09/14/13/device-979287_640.jpg" width="250px" height="250px"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Home Decor </h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">2,299</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn.pixabay.com/photo/2018/03/08/18/13/chair-3209341_640.jpg" width="250px" height="250px"
+          class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">Seating & Chairs</h5>
+          <p class="card-text">From Rs <span class="fw-bold fs-5">1,899</span></p>
+          <a href="#" class="btn btn-success">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="row mx-5 my-5 text-center">
+  <h2 class="mb-5">95+ Experience Stores Across India</h2>
+  <div class="row">
+    <div class="col-3">
+<img src="https://housing.com/news/wp-content/uploads/2023/08/Best-furniture-stores-in-Bangalore-f.jpg" width="200px" height="200px">
+<h5>Banglore</h5>
+<p>15 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://foyr.com/learn/wp-content/uploads/2022/06/where-do-interior-designers-shop.png" width="200px" height="200px" alt="">
+<h5>Ahmedabad</h5>
+<p>20 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://media.architecturaldigest.com/photos/622a4e512b9c59af16b36cc9/2:1/w_1280%2Cc_limit/PW%2520STORE-PILLOW%2520SHELF.jpg" width="200px" height="200px"  alt="">
+<h5>Goa</h5>
+<p>10 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://www.insaraf.com/cdn/shop/products/DSC_3899.jpg?v=1530634733"   width="200px" height="200px" alt="">
+<h5>Chennai</h5>
+<p>5 Stores</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-3">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0EbJdY16YL5QoS27Ej0WusB77RNdqYRbYbg&s" width="200px" height="200px">
+<h5>Pune</h5>
+<p>5 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://foyr.com/learn/wp-content/uploads/2022/06/where-do-interior-designers-shop.png" width="200px" height="200px" alt="">
+<h5>Kolkata</h5>
+<p>7 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://images.adsttc.com/media/images/588e/c637/e58e/ce7b/0300/01f1/large_jpg/17.jpg?1485751856" width="200px" height="200px"  alt="">
+<h5>Delhi</h5>
+<p>3 Stores</p>
+    </div>
+    <div class="col-3">
+<img src="https://i.pinimg.com/736x/f5/e3/a9/f5e3a9727aec444f40b61ce5ffd9fa91.jpg"   width="200px" height="200px" alt="">
+<h5>Jaipur</h5>
+<p>18 Stores</p>
+    </div>
+  </div>
+</div>
+<center><button type="button" class="btn btn-success  ">Explore All Stores</button></center>
+</div>
+<hr>
+
+<div id="carouselExample" class="carousel slide p-5 text-center">
+  <h2>Their Words, Our Pride</h2>
+  <p class="mb-5">Happy Words Of Our Happy Costumers</p>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-3 p-5 text-center border border-2">
+<img src="https://cdn.pixabay.com/photo/2019/04/21/09/00/interior-4143701_1280.jpg" width="200px" height="200px" alt="">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+<br>
+⭐⭐⭐⭐⭐<br>
+<span class="fw-bold">Priya</span><br>
+Banglore</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2022/03/11/07/21/interior-design-7061458_640.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Sam</span><br>
+          Kolkata</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2023/12/31/15/42/living-room-8480223_640.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Gowri</span><br>
+          Delhi</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2020/10/18/09/16/bedroom-5664221_640.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Ashiq</span><br>
+          Pune</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      =<div class="row ">
+        <div class="col-3 p-5 text-center border border-2">
+<img src="https://cdn.pixabay.com/photo/2023/03/02/16/34/living-room-7825796_640.jpg" width="200px" height="200px" alt="">
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+<br>
+⭐⭐⭐⭐⭐<br>
+<span class="fw-bold">John</span><br>
+Banglore</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2021/12/18/07/55/cup-6878196_1280.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Mufi</span><br>
+          Kolkata</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2018/09/15/09/05/home-3678956_640.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Afsall</span><br>
+          Delhi</p>
+        </div>
+        <div class="col-3 p-5  text-center border border-2">
+          <img src="https://cdn.pixabay.com/photo/2018/01/20/09/42/sofa-3094153_640.jpg" width="200px" height="200px" alt="">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium maxime amet quasi quos culpa placeat neque eligendi, sit dolor consectetur? Voluptas consequatur harum nihil reiciendis tenetur? Asperiores fugit rem officiis. <br>
+          <br>
+          ⭐⭐⭐⭐⭐<br>
+          <span class="fw-bold">Arjun</span><br>
+          Pune</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<footer class="bg-dark text-light text-start mt-5 p-5">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-2">
+<h4 class="fw-bold mb-3">OUR COMPANY</h4>
+<P>About Us <br><br>Career <br><br>Media <br><br>Blog <br><br>Customer Storeis <br><br>Our Stores</P>
+    </div>
+    <div class="col-2">
+<h4 class="fw-bold mb-3">USEFUL LINKS</h4>
+<P>Costume Furniture <br><br>Exporters <br><br>Buy In Bulk <BR><br> Hotel Furniture</BR><br> Delivery Location <br><br>
+Sitemap</P>
+    </div>
+    <div class="col-2">
+<h4 class="fw-bold mb-3">SHOP BY ROOM</h4>
+<P>Living Room <br><br>Bedroom <br><br>Dinig Room <br><br>Kids Room <br><br>Modular Furniture <br><br>Modular Kitchen
+<br><br> Modular Wardrobe </P>
+    </div>
+    <div class="col-2">
+<h4 class="fw-bold mb-3">NEED HELP</h4>
+<P>Help Center <br><br>Contact Us <br><br>Ask Expert <br><br> Track Your Order</P>
+    </div>
+    <div class="col-2"></div>
+  </div>
+  
+</footer>
+
+
+
+</body>
+
+</html>
